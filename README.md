@@ -1,154 +1,47 @@
 # German Credit Risk Prediction
 
-## Project Overview
+I built this project to understand how machine learning can be used to predict whether a customer is likely to become a credit risk. Banks collect information such as a customer's age, occupation, savings, checking account balance, loan amount and repayment duration before approving a loan. Instead of relying only on manual judgement, these factors can be used to train a machine learning model that estimates the customer's credit risk.
 
-This project builds an end-to-end Machine Learning pipeline to predict whether a customer is likely to have a good or bad credit risk using the German Credit dataset.
+For this project, I used the German Credit dataset and developed the complete workflow in Python using Google Colab. Rather than jumping directly to model building, I started by cleaning the dataset, checking missing values, understanding the variables, encoding categorical features and preparing the data for machine learning. After preprocessing, the dataset was divided into training and testing sets, numerical variables were standardized where required, and multiple classification models were trained and evaluated.
 
-The project covers the complete machine learning workflow including data preprocessing, exploratory data analysis (EDA), feature engineering, model building, evaluation, and model comparison.
+Instead of relying on a single algorithm, I wanted to compare different approaches. Logistic Regression was used as a simple baseline model, followed by Decision Tree and Random Forest. Finally, I trained an XGBoost classifier, which achieved the best performance among all the models tested.
 
-The primary objective is to help financial institutions identify high-risk loan applicants and support better lending decisions.
-
----
-
-## Problem Statement
-
-Banks receive thousands of loan applications every day.
-
-Approving loans for high-risk customers may lead to financial losses, while rejecting trustworthy customers reduces business opportunities.
-
-The objective of this project is to build a machine learning model capable of predicting customer credit risk using demographic and financial information.
-
----
-
-## Dataset
-
-**Dataset:** German Credit Dataset
-
-Number of observations: **954**
-
-Target Variable:
-
-- Credit Risk
-  - 1 = Good Credit
-  - 2 = Bad Credit
-
-Features include:
-
-- Age
-- Sex
-- Job
-- Housing
-- Saving Accounts
-- Checking Account
-- Credit Amount
-- Duration
-- Purpose
-
----
-
-## Machine Learning Workflow
-
-- Data Cleaning
-- Missing Value Treatment
-- Exploratory Data Analysis
-- One-Hot Encoding
-- Train-Test Split
-- Feature Scaling
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- XGBoost
-- Model Evaluation
-- Feature Importance Analysis
-- Model Saving
-
----
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- XGBoost
-- Joblib
-- Google Colab
-
----
-
-## Models Implemented
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- XGBoost
-
----
-
-## Model Performance
+The final model accuracies obtained in this project are shown below.
 
 | Model | Accuracy |
-|--------|----------|
+|--------|---------:|
 | Logistic Regression | **0.82** |
 | Decision Tree | **0.80** |
 | Random Forest | **0.86** |
 | XGBoost | **0.88** |
 
-**Best Performing Model:** XGBoost
+Although accuracy was the primary comparison metric, I also evaluated the models using confusion matrices, ROC-AUC curves and feature importance analysis to better understand how well each model distinguished between good and bad credit risk. These visualizations helped explain why XGBoost performed better than the other algorithms on this dataset.
 
----
-
-## Project Structure
+The repository contains the complete notebook used for the analysis, the cleaned dataset, the trained XGBoost model saved using Joblib, comparison results for all models and the visualizations generated during the project. The folder structure is organised so that each component of the project can be accessed independently.
 
 ```
-German_Credit_Risk_Prediction/
-
+German_Credit_Risk_Prediction
 │
-├── images/
-├── models/
-├── results/
-├── German_Credit_Risk_Prediction.ipynb
+├── images/        # Project visualizations
+├── models/        # Saved XGBoost model (.pkl)
+├── results/       # Model comparison results
 ├── german_credit.csv
+├── German_Credit_Risk_Prediction.ipynb
 └── README.md
 ```
 
----
+Working on this project helped me understand the complete machine learning pipeline rather than just training a model. It reinforced concepts such as preprocessing categorical variables, feature scaling, train-test splitting, model evaluation, overfitting, ROC-AUC analysis and comparing multiple algorithms before selecting the final model. It also gave me practical experience in organising a machine learning project on GitHub.
 
-## Key Results
-
-- Successfully predicted customer credit risk using multiple machine learning algorithms.
-
-- Compared four classification models.
-
-- XGBoost achieved the highest accuracy (**88%**).
-
-- Feature importance analysis identified the most influential variables affecting credit risk.
-
-- Saved the trained model using Joblib for future predictions.
+This project can be extended further by tuning model hyperparameters, performing cross-validation and deploying the trained model as a simple web application that predicts the credit risk of new loan applicants.
 
 ---
 
-## Future Improvements
+**Tools and Libraries:** Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Joblib, Google Colab
 
-- Hyperparameter tuning using GridSearchCV
-
-- Cross-validation
-
-- Deployment using Streamlit or Flask
-
-- Probability calibration
-
-- Model explainability using SHAP values
-
----
-
-## Author
-
-**Atulya Singh**
-
+**Author:**
+Atulya Singh  
 Master's in Economics
 
 Delhi School of Economics
+
 
