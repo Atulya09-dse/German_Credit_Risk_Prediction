@@ -1,4 +1,5 @@
 # German Credit Risk Prediction
+This notebook develops a machine learning pipeline to predict German credit risk using multiple classification algorithms. The workflow includes data preprocessing, exploratory data analysis, feature engineering, model training, evaluation and model comparison before saving the best-performing model.
 
 I built this project to understand how machine learning can be used to predict whether a customer is likely to become a credit risk. Banks collect information such as a customer's age, occupation, savings, checking account balance, loan amount and repayment duration before approving a loan. Instead of relying only on manual judgement, these factors can be used to train a machine learning model that estimates the customer's credit risk.
 
