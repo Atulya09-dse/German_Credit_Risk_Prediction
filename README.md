@@ -150,4 +150,5 @@ German_Credit_Risk_Prediction/
 
 Master's in Economics
 
-Delhi Technological University (DTU)
+Delhi School of Economics
+
