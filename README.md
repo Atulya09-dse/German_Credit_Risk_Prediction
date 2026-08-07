@@ -32,6 +32,50 @@ German_Credit_Risk_Prediction
 
 Working on this project helped me understand the complete machine learning pipeline rather than just training a model. It reinforced concepts such as preprocessing categorical variables, feature scaling, train-test splitting, model evaluation, overfitting, ROC-AUC analysis and comparing multiple algorithms before selecting the final model. It also gave me practical experience in organising a machine learning project on GitHub.
 
+
+## Project Visualizations
+
+The figures below summarize the most important stages of the analysis and the performance of the final models.
+
+### Credit Risk Distribution
+
+This plot shows the distribution of good and bad credit risk customers in the dataset before model training.
+
+![Credit Risk Distribution](images/CLASS%20DISTRIBUTION.png)
+
+
+---
+
+### Confusion Matrix
+
+The confusion matrix illustrates how well the final model classified customers into good and bad credit risk categories.
+
+![Confusion Matrix](images/confusion%20matrix.png)
+
+---
+
+### ROC-AUC Curve
+
+The ROC curve evaluates the model's ability to distinguish between the two credit risk classes across different classification thresholds.
+
+![ROC Curve](images/ROC-AUC.png)
+
+---
+
+### Feature Importance
+
+This visualization highlights the variables that contributed the most to the predictions made by the XGBoost model.
+
+![Feature Importance](images/IMPORTANT%20FEATURES.png)
+
+---
+
+### Model Comparison
+
+The final comparison of all four machine learning models shows that XGBoost achieved the highest prediction accuracy.
+
+![Model Comparison](images/MODEL%20COMPARISION%20CHART.png)
+
 This project can be extended further by tuning model hyperparameters, performing cross-validation and deploying the trained model as a simple web application that predicts the credit risk of new loan applicants.
 
 ---
